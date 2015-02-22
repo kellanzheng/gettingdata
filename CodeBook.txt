@@ -13,7 +13,7 @@ activityName	:	name of activity performed for measurements
 	5	STANDING
 	6	LAYING
 		
-The remaining 86 variables in this data set are average values calculated from all available data from the original dataset.
+The remaining 86 summary variables in this data set are averages calculated from all available data from the original dataset.
 
 		The original dataset states:
 
@@ -23,6 +23,8 @@ The remaining 86 variables in this data set are average values calculated from a
 		
 		Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
 		
+The summary variables are:
+
 tBodyAcc-mean()-X	:	Average value of tBodyAcc-mean()-X
 tBodyAcc-mean()-Y	:	Average value of tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z	:	Average value of tBodyAcc-mean()-Z
