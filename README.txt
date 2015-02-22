@@ -12,11 +12,20 @@ This project consists of an R script that transforms the raw data from the "Huma
     4. Appropriately labels the data set with descriptive variable names. 
     5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Prerequisites
+The submission consists of the following:
+	1. run_analysis.R - R script that takes the raw dataset and transforms it into a tidy dataset ("output.txt") - see Script Details for a walkthrough of the script
+	2. CodeBook.txt - text file specifying the variables that exist in the output file "output.txt"
+	3. README.txt
+	
+==================================================================
+Script Details
+==================================================================
+	
+PREREQUISITES
 The following R packages, besides the default packages available in R version 3.1.2, need to be installed before running the script. The script will load this dataset up if it is not yet loaded.
 	1. dplyr
 	2. reshape2
-	
+
 This script starts with the assumption that the Samsung data is available in the working directory in an unzipped "UCI HAR Dataset" folder. The data is available at: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
@@ -47,9 +56,8 @@ The script performs the following actions:
 		d. Combine this Y set to the data set from the previous step with cbind.
 		e. Left join the activity labels index to this data set, using the values from the Y set as a lookup. This creates a new column called "activityName" containing the corresponding activity for each observation.
 			i. Note that this scrambles the original order of observations.
-	6. Creates a second, independent data set with the average of each variable for each activity.
+	7. Creates a second, independent data set with the average of each variable for each activity.
 		a. Using reshape2's melt and dcast function, the script computes the mean of each variable, for each combination of "subject" and "activityName".
 		b. This data set is written to a file called "output.txt" in the working directory.
 
-		
-			
+The output of this script is the tidy data set contained in "output.txt".
